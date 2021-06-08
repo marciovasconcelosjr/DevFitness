@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DevFitness.API</name>
+    </assembly>
+    <members>
+        <member name="M:DevFitness.API.Controllers.UsersController.Get(System.Int32)">
+            <summary>
+            Retorna detalhes de usuário
+            </summary>
+            <param name="id">Identificador de usuário</param>
+            <returns>Objeto de detalhes de usuário</returns>
+            <response code="404">Usuário não encontrado</response>
+            <response code="200">Usuário encontrado com sucesso.</response>
+        </member>
+        <member name="M:DevFitness.API.Controllers.UsersController.Post(DevFitness.API.Models.InputModels.CreateUserInputModel)">
+            <summary>
+            Cadastrar um usuário
+            </summary>
+            <remarks>
+            Requisição de exemplo:
+            {
+            "fullName": "Márcio",
+            "Height": 1.75,
+            "Weight": 80,
+            "BirthDate": "1997-10-10 00:00:00"
+            }
+            </remarks>
+            <param name="inputModel">Objetos com dados de cadastro do Usuário</param>
+            <returns>Objeto recém-criado.</returns>
+            <response code="201">Objeto criado com sucesso</response>
+            <response code="400">Dados Invalidos</response>
+        </member>
+        <member name="M:DevFitness.API.Controllers.UsersController.Put(System.Int32,DevFitness.API.Models.InputModels.UpdateUserInputModel)">
+            <summary>
+            Atualização de usuário
+            </summary>
+            <param name="id">Identificador de usuário</param>
+            <param name="inputModel">Atualizar detalhes de usuário</param>
+            <returns>Objeto atualizado</returns>
+            <response code="404">Usuário não encontrado</response>
+            <response code="200">Usuário atualizado.</response>
+        </member>
+    </members>
+</doc>
